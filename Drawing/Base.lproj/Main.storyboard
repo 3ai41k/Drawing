@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Drawing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xt1-B3-HYK" customClass="DrawingView" customModule="Drawing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="704"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eFm-aE-iNf" appends="YES" id="32P-QC-3IU"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9OZ-pw-or0">
+                                <rect key="frame" x="0.0" y="748" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtC-Bl-iBN">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="30"/>
+                                        <state key="normal" title="Color">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Hgt-MY-KvS" kind="popoverPresentation" popoverAnchorView="HtC-Bl-iBN" id="Z0A-AI-js1">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFN-5v-1hn">
+                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="30"/>
+                                        <state key="normal" title="Brush">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="GGI-IY-HdT" kind="popoverPresentation" popoverAnchorView="uFN-5v-1hn" id="rFi-v4-WFt">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gym-aw-6rD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gym-aw-6rD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="gym-aw-6rD"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0JE-Le-QdR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9OZ-pw-or0" secondAttribute="trailing" id="3Lu-oZ-UJz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xt1-B3-HYK" secondAttribute="trailing" id="6AF-La-E6e"/>
+                            <constraint firstItem="9OZ-pw-or0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6lc-nP-CV5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9OZ-pw-or0" secondAttribute="trailing" id="FeE-te-Ghz">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="9OZ-pw-or0" firstAttribute="top" secondItem="Xt1-B3-HYK" secondAttribute="bottom" id="LGW-Kb-lR0"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MS9-82-gG6"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sui-Ve-K3e"/>
+                            <constraint firstItem="9OZ-pw-or0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XR7-Jl-Jen"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZoI-VD-6dY"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="bottom" secondItem="HtC-Bl-iBN" secondAttribute="top" id="acq-8e-hWb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9OZ-pw-or0" secondAttribute="bottom" id="cGo-Pb-vSz">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eEh-mG-ifM"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gVh-a4-gyI"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hHe-pL-Hl1"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ieZ-1o-aNJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Xt1-B3-HYK" secondAttribute="bottom" constant="34" id="jJm-Z4-oBT"/>
+                            <constraint firstItem="9OZ-pw-or0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tkf-jf-oyj"/>
+                            <constraint firstItem="Xt1-B3-HYK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yf4-h2-xoD">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0JE-Le-QdR"/>
+                                <exclude reference="LGW-Kb-lR0"/>
+                                <exclude reference="MS9-82-gG6"/>
+                                <exclude reference="Sui-Ve-K3e"/>
+                                <exclude reference="ZoI-VD-6dY"/>
+                                <exclude reference="acq-8e-hWb"/>
+                                <exclude reference="eEh-mG-ifM"/>
+                                <exclude reference="gVh-a4-gyI"/>
+                                <exclude reference="hHe-pL-Hl1"/>
+                                <exclude reference="ieZ-1o-aNJ"/>
+                                <exclude reference="jJm-Z4-oBT"/>
+                                <exclude reference="yf4-h2-xoD"/>
+                                <exclude reference="3Lu-oZ-UJz"/>
+                                <exclude reference="6AF-La-E6e"/>
+                                <exclude reference="6lc-nP-CV5"/>
+                                <exclude reference="FeE-te-Ghz"/>
+                                <exclude reference="XR7-Jl-Jen"/>
+                                <exclude reference="cGo-Pb-vSz"/>
+                                <exclude reference="tkf-jf-oyj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="0JE-Le-QdR"/>
+                                <include reference="LGW-Kb-lR0"/>
+                                <exclude reference="Sui-Ve-K3e"/>
+                                <include reference="ZoI-VD-6dY"/>
+                                <include reference="gVh-a4-gyI"/>
+                                <exclude reference="ieZ-1o-aNJ"/>
+                                <include reference="yf4-h2-xoD"/>
+                                <exclude reference="6AF-La-E6e"/>
+                                <include reference="6lc-nP-CV5"/>
+                                <include reference="FeE-te-Ghz"/>
+                                <include reference="cGo-Pb-vSz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="MS9-82-gG6"/>
+                                <include reference="acq-8e-hWb"/>
+                                <include reference="eEh-mG-ifM"/>
+                                <include reference="hHe-pL-Hl1"/>
+                                <exclude reference="jJm-Z4-oBT"/>
+                                <include reference="3Lu-oZ-UJz"/>
+                                <include reference="XR7-Jl-Jen"/>
+                                <include reference="tkf-jf-oyj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="brushSizeButton" destination="uFN-5v-1hn" id="B0E-tV-qNw"/>
+                        <outlet property="colorButton" destination="HtC-Bl-iBN" id="xpq-c9-Na1"/>
+                        <outlet property="drawingView" destination="Xt1-B3-HYK" id="SDk-T7-PTu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="eFm-aE-iNf">
+                    <connections>
+                        <action selector="didPanWithRecognizer:" destination="Xt1-B3-HYK" id="Rhx-xT-qlr"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="129.31034482758622"/>
+        </scene>
+        <!--Pop Up Table View Controller-->
+        <scene sceneID="X7X-cI-GQj">
+            <objects>
+                <tableViewController storyboardIdentifier="popViewController" id="Hgt-MY-KvS" customClass="PopUpTableViewController" customModule="Drawing" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WWw-bO-iHG">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Hgt-MY-KvS" id="Q7M-Hm-hES"/>
+                            <outlet property="delegate" destination="Hgt-MY-KvS" id="cvy-gf-1Ee"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="250" height="250"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tlz-4r-q6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="-79"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="GiX-ps-OuM">
+            <objects>
+                <viewController storyboardIdentifier="BrushViewController" id="GGI-IY-HdT" customClass="PopUpViewController" customModule="Drawing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fFS-nT-ELR">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9r1-Yg-USk"/>
+                    </view>
+                    <size key="freeformSize" width="250" height="250"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LON-9p-c8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="337"/>
+        </scene>
+    </scenes>
+</document>
